@@ -1,0 +1,18 @@
+<%include ../partials/header%>
+<div class="container">
+        <div style="width:30%; margin:25px auto;">
+<%if(cnumber.length===16){%>
+    <h1 style="align:center">
+        Successful Payment
+    </h1>
+<%}
+else{%>
+    <h1 style="align:center">Payment Fail</h1>
+<%}%>
+
+
+<a href="/user/dashboard" class="btn btn-success">Click For More Booking..</a>
+</div>
+</div>
+<%include ../partials/footer%>
+

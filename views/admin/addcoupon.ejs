@@ -1,0 +1,30 @@
+<%include ../partials/header%>
+
+<div class="container">
+        <div class="row">
+             <h1 style="text-align:center;">Add Car</h1>
+             <div style="width:30%; margin:25px auto;">
+                 <form action="/admin/coupon" method="POST">
+                    <div class="form-group">
+                       <label>Coupon Provider Name:</label>
+                       <input class="form-control" name="name" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Discount:</label> 
+                        <input class="form-control" name="discount" type="number" required>
+                     </div>
+                    <div class="form-group">
+                        <label>Code</label> 
+                        <input class="form-control" name="code" type="text" required>
+                     </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                    </div>
+                </form>
+                <a href="/cardisplay">Go back</a>
+            </div>
+        </div>
+    </div>
+
+
+<%include ../partials/footer%>

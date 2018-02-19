@@ -1,0 +1,31 @@
+<%include ../partials/header%>
+
+<a href="/admin/index">Current Users</a>--><a href="/displayCar">Car Display</a>--><a href="/admin/coupon">Offers</a>
+
+<h1>List of Cars</h1>
+<a class="btn btn-primary" href="/addcar">ADD</a>
+<div class="container">
+    <div class="row">
+<% cars.forEach( function(Car){ %>
+    <div class="col-md-6">
+    <div class="thumbnail">
+ <img src="<%= Car.image %>">
+  <%= Car.name %>
+  <%= Car.type %>
+  <%= Car.price %>
+  <div >
+  <form  style="display:inline;" action="<%=Car._id %>/modify"  method="GET"> 
+    <button class="btn btn-success">Modify</button>
+  </form>
+ <form  style="display:inline;" action="<%=Car._id %>?_method=DELETE" method="POST">
+<button class="btn btn-danger">Delete</button>
+ </form>
+ </div>
+    </div>
+    </div>
+<% }) %>
+</div>
+</div>
+
+
+<%include ../partials/footer%>

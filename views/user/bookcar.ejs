@@ -1,0 +1,59 @@
+<%include ../partials/header%>
+
+<a href="#">Checklist</a>--><a href="/user/payment">Payment</a>--><a href="/user/paymentStatus">Payment Status</a>
+<% console.log("date",fdate,tdate);%>
+<div class="container">
+        <div class="row">
+             <h1 style="text-align:center;">New User</h1>
+             <div style="width:30%; margin:25px auto;">
+                 <form action="/user/payment" method="POST">
+                    <div class="form-group">
+                       <label> Name:</label>
+                       <input disabled class="form-control" name="name" type="text" placeholder="name" value="<%=user.name%>">
+                    </div>  
+                    <div class="form-group">
+                        <label>DOB:</label> 
+                        <input disabled class="form-control" name="dob" type="date" value="<%=user.dob%>">
+                     </div>
+                    <div class="form-group">
+                        <label>Username:</label> 
+                        <input disabled class="form-control" name="username" type="text" placeholder="abc" value="<%=user.username%>">
+                     </div>
+                    <div class="form-group">
+                        <label>Phone No:</label>
+                        <input disabled class="form-control" name="phoneNo" type="number" placeholder="XXXXXXXXXX" value="<%=user.phone%>">
+                    </div>
+                    <div class="form-group ">
+                        <label>address</label>
+                            <input disabled type="text" class="form-control" placeholder="state" name="state" value="<%=user.state%>">
+                            <input disabled type="text" class="form-control" placeholder="city" name="city" value="<%=user.city%>">
+                            <input disabled type="number" class="form-control" placeholder="pin" name="pin" value="<%=user.pin%>">
+                    </div>
+                    <div class="form-group">
+                        <label>DL Image:</label> 
+                        <input disabled class="form-control" name="dl" type="text" placeholder="Dl image link" value="<%=user.dl%>">
+                    </div>
+                    <div class="form-group">
+                       <label>Email:</label> 
+                       <input disabled class="form-control" name="email" type="email" placeholder="abc@example.com" value="<%=user.dl%>">
+                    </div>
+                    <div class="form-group">
+                           <input required type="checkbox"  name="confirm" value="confirm">All above details are correct..??
+                    </div>
+                    <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Pay</button>
+                     </div>
+                </form>
+                <a href="/">Go back</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+    function parseDate(input) {
+  var parts = input.split('-');
+  return new Date(parts[0], parts[1]-1, parts[2]); 
+}
+    </script> -->
+
+<%include ../partials/footer%>

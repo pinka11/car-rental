@@ -1,0 +1,55 @@
+<%include ../partials/header%>
+
+<div class="container">
+        <div class="row">
+             <h1 style="text-align:center;">Search For Cars</h1>
+             <div style="width:30%; margin:25px auto;">
+                 <form action="/user/availablecar" method="POST">
+                    <div class="form-group">
+                       <label>From Date:</label> 
+                       <input class="form-control" name="fdate" type="date" required>
+                        <label>To Date:</label>
+                        <input class="form-control" name="tdate" type="date" required>
+                    </div>
+                    <div class="form-group ">
+                            <label>From City:</label> 
+                            <select class="form-control" name="fcity">
+                                <option value="">Select City</option>
+                                <option value="New Delhi">New Delhi</option>
+                                <option value="Gurgaon">Gurgaon</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himanchal">Himachal</option>
+                                <option value="Mumba">Mumbai</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                            <label>To City:</label> 
+                            <select class="form-control" name="tcity" required>
+                                <option value="">Select City</option>
+                                <option value="New Delhi">New Delhi</option>
+                                <option value="Gurgaon">Gurgaon</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal">Himachal</option>
+                                <option value="Mumbai">Mumbai</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                            <label>Car Type:</label> 
+                            <select class="form-control" name="type" required>
+                                <option value="">Select CarType</option>
+                                <option value="Mercedes">Mercedes</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="Maruti">Maruti</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                    </div>
+                </form>
+                <a href="/">Go back</a>
+            </div>
+        </div>
+    </div>
+
+<%include ../partials/footer%>

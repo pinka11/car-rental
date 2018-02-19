@@ -1,0 +1,27 @@
+<%include ../partials/header%>
+
+<a href="/admin/index">Current Users</a>--><a href="/displayCar">Car Display</a>--><a href="/admin/coupon">Offers</a>
+
+<a href="/admin/addcoupon" class="btn btn-primary">ADD</a>
+
+<h1>Available Offers</h1>
+<div class="row">
+        <div class="col-md-8">
+<table border="3px">
+    <tr>
+        <th>Provider Name</th>
+        <th>Discount</th>
+        <th>Code</th>
+    </tr>
+        <%coupon.forEach(function(coupon){%>
+            <tr>
+            <th><%= coupon.name %></th>  
+            <th><%= coupon.discount %></th> 
+            <th><%= coupon.code %></th> 
+          </tr>
+            <%})%>  
+</table>
+</div>
+
+<%include ../partials/footer%>
+

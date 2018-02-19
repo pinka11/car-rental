@@ -1,0 +1,32 @@
+<%include ../partials/header%>
+
+<h1>Available Cars</h1>
+<div class="container">
+    <div class="row">
+<% cars.forEach( function(Car){ %>
+    <div class="col-md-6">
+    <div class="thumbnail">
+ <img src="<%= Car.image %>">
+  <%= Car.name %>
+  <%= Car.type %>
+  <%= Car.price %>
+  <div >
+  <form  style="display:inline;" action="/user/<%=user._id%>/<%=Car._id %>/book"  method="POST"> 
+   <% if(user.approval==true){
+       if(user.disable==false){%>
+        <button class="btn btn-success">Book</button>
+   <% }else{%>
+    <% console.log("disable.......",user.disable);%>
+    <button class="btn btn-success" disabled>Book</button>
+  <% }}else{%>
+        <button disabled class="btn btn-success">Book</button>
+    <%}%>
+  </form>
+ </div>
+    </div>
+    </div>
+<% }) %>
+</div>
+</div>
+
+<%include ../partials/footer%>
